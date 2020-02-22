@@ -18,6 +18,9 @@ wget -r -N -c -np --user YOUR_USER_NAME --ask-password https://physionet.org/fil
 
 where `YOUR_USER_NAME` is the username you applied from [physionet.org](https://physionet.org/content/mimiciii/1.4/).
 
+#### Install PostgreSQL
+ - install `postgresql` from homebrew using the following command: `brew install postgresql`
+
 #### Build MIMIC III Database
 
 Go to your hard drive directory `/Volumes/YOUR_DISK_NAME` and clone the mimic-code repo:
