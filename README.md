@@ -20,7 +20,8 @@ where `YOUR_USER_NAME` is the username you applied from [physionet.org](https://
 
 #### Install PostgreSQL
  - install `postgresql` from homebrew using the following command: `brew install postgresql`
-
+ - start postgresql service : `brew services start postgresql`
+ 
 #### Build MIMIC III Database
 
 Go to your hard drive directory `/Volumes/YOUR_DISK_NAME` and clone the mimic-code repo:
@@ -34,4 +35,9 @@ Now we are inside the `postgres` directory which contains bunch of `.sql` script
 
  - install `postgresql` from homebrew using the following command: `brew install postgresql`
  - start the `postgresql` service with the following command: `brew services start postgresql`
- - 
+ - connect with postgresql : `psql -U username -d postgres`
+
+### Data Wrangling
+ - Find acute stroke patient `ICD code：hemorrhagic stroke (I60–I62; 430-431) and ischemic stroke (I63; 434)` from diagnoses_icd table.
+ - For taget variables:
+ 
