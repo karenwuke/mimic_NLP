@@ -43,3 +43,11 @@ Now we are inside the `postgres` directory which contains bunch of `.sql` script
  -- length of stay:
  -- 30-day readmission:
  
+ #### Data Overview
+ There are 58976 records in admission table with 46520 distinct	patients, within them, there are 1912 distinct patient and 2025	admissions with diagnosis with acute stroke. 
+ 
+|               | Yes | No   |   |   |
+|---------------|-----|------|---|---|
+| Is Dead       | 592 | 1433 |   |   |
+| Is Readmitted | 91  | 1934 |   |   |
+|               |     |      |   |   |
