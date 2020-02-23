@@ -40,4 +40,6 @@ Now we are inside the `postgres` directory which contains bunch of `.sql` script
 ### Data Wrangling
  - Find acute stroke patient `ICD code：hemorrhagic stroke (I60–I62; 430-431) and ischemic stroke (I63; 434)` from diagnoses_icd table.
  - For taget variables:
+ -- length of stay:
+ -- 30-day readmission:
  
