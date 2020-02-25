@@ -38,15 +38,17 @@ Now we are inside the `postgres` directory which contains bunch of `.sql` script
  - connect with postgresql : `psql -U username -d postgres`
 
 ### Data Wrangling
- - Find acute stroke patient `ICD code：hemorrhagic stroke (I60–I62; 430-431) and ischemic stroke (I63; 434)` from diagnoses_icd table.
- - For taget variables:
- -- length of stay:
- -- 30-day readmission:
+ - Find acute stroke patient `ICD code：hemorrhagic stroke (I60–I62; 430-431) and ischemic stroke (I63; 434)` from diagnoses_icd table. 
+ - ADMISSIONS — a table containing admission and discharge dates (has a unique identifier HADM_ID for each admission)
+ - NOTEEVENTS — contains all notes for each hospitalization (links with HADM_ID). There are detailed information in text column and note catorgary. 
+ - For target variables:
+ 1.length of stay.
+ 2.30-day readmission.
+ 3.Mortality.
  
- #### Data Overview
- There are 58976 records in admission table with 46520 distinct	patients, within them, there are 1912 distinct patient and 2025	admissions with diagnosis with acute stroke. 
+ There are 58976 records in admission table with 46520 distinct	patients, within them, there are 1912 distinct patient and 2025	admissions with diagnosis with acute stroke, there are 8 record that should be recognized as invalid since their discharge time is before admission time. When look into those target variables, the samples fall into the following table:
 
 |               | Yes |  No  |
 |:-------------:|:---:|:----:|
-|    Is Dead    | 592 | 1433 |
-| Is Readmitted |  91 | 1934 |
+|    Is Dead    | 584 | 1433 |
+| Is Readmitted |  83 | 1934 |
